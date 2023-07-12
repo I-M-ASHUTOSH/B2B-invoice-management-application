@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  
+ 
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+  
+  <servlet>
+  	<servlet-name>AddServlet</servlet-name>
+  	<servlet-class>com.highradius.servlets.AddServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>AddServlet</servlet-name>
+  	<url-pattern>/add</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+ 
+   <servlet>
+  	<servlet-name>Delete</servlet-name>
+  	<servlet-class>com.highradius.servlets.DeleteServlet</servlet-class>
+  </servlet>
+  
+ 
+  <servlet-mapping>
+  	<servlet-name>Delete</servlet-name>
+  	<url-pattern>/delete</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+  	<servlet-name>dataloading</servlet-name>
+  	<servlet-class>com.highradius.servlets.DataLoadingServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>dataloading</servlet-name>
+  	<url-pattern>/readdata</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet>
+  	<servlet-name>edit</servlet-name>
+  	<servlet-class>com.highradius.servlets.EditServlet</servlet-class>
+  </servlet>
+ 
+ 
+  <servlet-mapping>
+  	<servlet-name>edit</servlet-name>
+  	<url-pattern>/edit</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+  	<filter-name>CORSFilter</filter-name>
+  	<filter-class>utils.CORSFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>CORSFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  
+  
+  
+</web-app>
